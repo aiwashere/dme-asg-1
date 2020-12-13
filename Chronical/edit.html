@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
+
+    </script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </script>
+
+    <script type="module">
+        import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+        window.alertController = alertController;
+    </script>
+
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Edit</ion-title>
+                <ion-buttons slot="start">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <button onclick="goBack()"></button>
+                  </ion-buttons>
+        </ion-header>
+
+        <ion-content>
+            <ion-card>
+                <ion-item>
+                    <ion-label>Start Date</ion-label>
+                    <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                </ion-item>
+
+
+
+                <ion-item>
+                    <ion-label position="floating">Title</ion-label>
+                    <ion-input type="text" id="input-reason"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-textarea placeholder="Enter your thoughts here..."></ion-textarea>
+                </ion-item>
+
+                <div class="ion-margin ion-margin-vertical ion-text-right">
+                    <ion-button fill="outline" color="danger" id="btn-cancel" type="reset" value="clear">
+                        <ion-icon name="close"></ion-icon>
+                        Clear
+                    </ion-button>
+
+
+                    <ion-button color="primary" id="btn-confirm">Add Expense</ion-button>
+                </div>
+
+            </ion-card>
+
+
+        </ion-content>
+
+
+    </ion-app>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

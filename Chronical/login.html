@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
+
+    </script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+  <link rel="stylesheet" href="style.css">
+    </script>
+
+    <script type="module">
+        import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+        window.alertController = alertController;
+    </script>
+<style>
+    ion-content{
+        --ion-background-color:#70e9df;
+
+    
+  }
+
+ion-header{
+  --ion-background-color:#38d4b8;
+}
+  .new-background-color{
+    --background: #9ae6d5;
+  }
+  
+  #container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+    
+  }
+    </style>
+</head>
+
+<body>
+    <ion-app>
+        <ion-content>
+            <ion-header>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-back-button></ion-back-button>
+                  </ion-buttons>
+                  <ion-title>SignIn</ion-title>
+                </ion-toolbar>
+              </ion-header>
+              
+              <ion-content>
+                <form>
+                  <ion-item lines="full">
+                    <ion-label position="floating">Email</ion-label>
+                    <ion-input type="text" required></ion-input>
+                  </ion-item>
+              
+                  <ion-item lines="full">
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input type="password" required></ion-input>
+                  </ion-item>
+              
+                  <ion-row>
+                    <ion-col>
+                      <ion-button type="submit" color="primary" expand="block">SignIn</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </form>
+              </ion-content>
+
+
+    </ion-app>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
