@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    </script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"> </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    </script>
-
-    <script type="module">
-        import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-        window.alertController = alertController;
-    </script>
-
+  <style>
+    :root {
+      --ion-safe-area-top: 20px;
+      --ion-safe-area-bottom: 22px;
+    }
+  </style>
 </head>
-
 <body>
-    <ion-app>
-        <ion-header>
-            <ion-toolbar color="primary">
-                <ion-title>Edit</ion-title>
-                <ion-buttons slot="start">
-                    <ion-icon name="chevron-back-outline"></ion-icon>
-                    <button onclick="goBack()"></button>
-                  </ion-buttons>
-        </ion-header>
+  <ion-app>
+    <ion-content>
 
-        <ion-content>
-            <ion-card>
+    </ion-card-item>
+    <ion-card>
+        <ion-list-header lines="full">
+            <ion-card-subtitle>Notes</ion-card-subtitle>
+        </ion-list-header>
+        <ion-card-item>
+
+
+            <form>
                 <ion-item>
-                    <ion-label>Start Date</ion-label>
-                    <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                    <ion-label>Date</ion-label>
+                    <ion-datetime id="input-date" value="2020-02-19" placeholder="Select Date"></ion-datetime>
                 </ion-item>
 
-
-
+                
                 <ion-item>
-                    <ion-label position="floating">Title</ion-label>
-                    <ion-input type="text" id="input-reason"></ion-input>
-                </ion-item>
-
-                <ion-item>
-                    <ion-textarea placeholder="Enter your thoughts here..."></ion-textarea>
-                </ion-item>
+                  <ion-label position="floating">Title</ion-label>
+                  <ion-input type="text" id="input-title"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-textarea  id="input-text" placeholder="Enter your thoughts here..."></ion-textarea>
+            </ion-item>
 
                 <div class="ion-margin ion-margin-vertical ion-text-right">
                     <ion-button fill="outline" color="danger" id="btn-cancel" type="reset" value="clear">
@@ -55,19 +50,50 @@
                     </ion-button>
 
 
-                    <ion-button color="primary" id="btn-confirm">Add Expense</ion-button>
+                    <ion-button color="primary"  id="btn-confirm">Add Note</ion-button>
                 </div>
+        </ion-card-item>
 
-            </ion-card>
-
-
-        </ion-content>
+    </ion-card>
 
 
-    </ion-app>
-    <script src="app.js"></script>
+    <ion-card>
+     
 
 
+            <ion-list-header lines="full">
+                <ion-card-subtitle>List of Notes</ion-card-subtitle>
+            </ion-list-header>
+
+            <ion-item-sliding (ionSwipe)="delete(item)">
+            <ion-list>
+                <ion-item id="noteList">
+
+                    <ion-label color="primary" id="new-title"> </ion-label>
+                    <ion-label id="new-date"> </ion-label>
+                    <ion-label id="new-text"> </ion-label>
+                </ion-item>
+                <ion-item-options>
+                    <button ion-button expandable (click)="delete(item)">Delete</button>
+                  </ion-item-options>
+            </ion-list>
+        </ion-item-sliding>
+
+
+     
+    </ion-card>
+
+
+
+
+
+</ion-content>
+
+
+    
+
+  <script src="edit.js"></script> 
+   
+  </ion-app>
 </body>
-
 </html>

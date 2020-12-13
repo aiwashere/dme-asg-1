@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="style.css">
     </script>
 
@@ -68,25 +68,24 @@ new-background-color{
               <ion-buttons slot="start">
                 <ion-back-button></ion-back-button>
               </ion-buttons>
-              <ion-title>Register</ion-title>
+              <ion-title>Sign Up</ion-title>
             </ion-toolbar>
           </ion-header>
           
-          <ion-content>
+          <ion-content">
             <form>
               <ion-item lines="full">
-                <ion-label position="floating">First name</ion-label>
-                <ion-input type="text" required></ion-input>
+                <ion-label position="floating">Full Name</ion-label>
+                <ion-input type="text" id="nameForm" required></ion-input>
               </ion-item>
-          
               <ion-item lines="full">
-                <ion-label position="floating">Last name</ion-label>
-                <ion-input type="text" required></ion-input>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input  type="text" id="usernameForm" required></ion-input>
               </ion-item>
-          
+  
               <ion-item lines="full">
                 <ion-label position="floating">Email</ion-label>
-                <ion-input type="text" required></ion-input>
+                <ion-input type="email" id="emailForm" required></ion-input>
               </ion-item>
           
               <ion-item lines="full">
@@ -96,14 +95,14 @@ new-background-color{
           
               <ion-row>
                 <ion-col>
-                  <ion-button type="submit" color="secondary" expand="block">Sign Up</ion-button>
+                  <ion-button id="submit" type="submit" color="secondary" expand="block"  >Sign Up</ion-button>
                 </ion-col>
               </ion-row>
             </form>
           </ion-content>
               </ion-content>
 
-
+            
     </ion-app>
     <script src="app.js"></script>
 
