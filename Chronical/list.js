@@ -6,3 +6,14 @@ $( document ).ready(function() {
     document.getElementById("new-text").innerHTML = localStorage.getItem("#new-text");
 });
 
+
+//clear input
+var deletes = document.querySelectorAll('#noteList')
+
+deletes.forEach(label =>{
+    label.addEventListener('click', function(){
+        var li = this.parentNode
+        li.remove();
+    })
+})
+

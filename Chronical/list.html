@@ -53,7 +53,23 @@
 </ion-content>
 
 
-    
+<ion-tabs >  
+                
+  <ion-tab-bar slot="bottom" class="ion-no-border">
+  
+ <ion-tab-button class="list" onclick="document.location='list.html'">
+  <ion-icon name="list-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button class="edit" onclick="document.location='edit.html'">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button class="profile" onclick="document.location='profile.html'" >
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
 
   <script src="list.js"></script> 
    

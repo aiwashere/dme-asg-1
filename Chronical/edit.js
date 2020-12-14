@@ -29,27 +29,15 @@ $(confirmBtn).click(function(){
     localStorage.setItem("#new-text", titleInput.value);
     localStorage.setItem("#new-title", textInput.value);
 
-    const entereddate = dateInput.value;
-    const enteredtitle = titleInput.value;
-    const enteredtext = textInput.value;
+    
 
-    newdate.append(entereddate +"<br/>" );
-    newTitle.append(enteredtitle +"<br/>" );
-    newtext.append(enteredtext + "<br/>");
   }
 });
 
 
 
-//clear input
-var deletes = document.querySelectorAll('#noteList')
-
-deletes.forEach(label =>{
-    label.addEventListener('click', function(){
-        var li = this.parentNode
-        li.remove()
-    })
-})
-
-
-    
+   
+// Back button in edit
+function goBack() {
+  window.history.back();
+}

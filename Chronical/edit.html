@@ -24,7 +24,13 @@
     <ion-card>
         <ion-list-header lines="full">
             <ion-card-subtitle>Notes</ion-card-subtitle>
+
         </ion-list-header>
+        <ion-header lines="full">
+          
+          <button  value="Back"  onclick="goBack()" style="text-align:right"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          
+      </ion-header>
         <ion-card-item>
 
 
@@ -33,8 +39,6 @@
                     <ion-label>Date</ion-label>
                     <ion-datetime id="input-date" value="2020-02-19" placeholder="Select Date"></ion-datetime>
                 </ion-item>
-
-                
                 <ion-item>
                   <ion-label position="floating">Title</ion-label>
                   <ion-input type="text" id="input-title"></ion-input>
@@ -42,7 +46,7 @@
               <ion-item>
                 <ion-textarea  id="input-text" placeholder="Enter your thoughts here..."></ion-textarea>
             </ion-item>
-
+          <ion-item>
                 <div class="ion-margin ion-margin-vertical ion-text-right">
                     <ion-button fill="outline" color="danger" id="btn-cancel" type="reset" value="clear">
                         <ion-icon name="close"></ion-icon>
@@ -52,40 +56,10 @@
 
                     <ion-button color="primary"  id="btn-confirm">Add Note</ion-button>
                 </div>
+              </ion-item>
         </ion-card-item>
 
     </ion-card>
-
-
-    <ion-card>
-     
-
-
-            <ion-list-header lines="full">
-                <ion-card-subtitle>List of Notes</ion-card-subtitle>
-            </ion-list-header>
-
-            <ion-item-sliding (ionSwipe)="delete(item)">
-            <ion-list>
-                <ion-item id="noteList">
-
-                    <ion-label color="primary" id="new-title"> </ion-label>
-                    <ion-label id="new-date"> </ion-label>
-                    <ion-label id="new-text"> </ion-label>
-                </ion-item>
-                <ion-item-options>
-                    <button ion-button expandable (click)="delete(item)">Delete</button>
-                  </ion-item-options>
-            </ion-list>
-        </ion-item-sliding>
-
-
-     
-    </ion-card>
-
-
-
-
 
 </ion-content>
 

@@ -60,5 +60,3 @@ Its simplicity and minimalistic design are easy to use to create and intuitive U
 https://unsplash.com/photos/El-egS_h_N4
 - Profile BG
 https://unsplash.com/photos/vC8wj_Kphak
-
-
