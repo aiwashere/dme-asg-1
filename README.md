@@ -18,6 +18,7 @@ https://xd.adobe.com/view/4dee8481-25f2-4a3d-baa3-591cfbb835d8-18bd/
 ### Features Left to Implement
 - Calender View
 - Able to edit at the click of a button on View List
+- Add the mood of the user
 
 ## Technologies Used
 - Jquery
@@ -30,7 +31,7 @@ Its simplicity and minimalistic design are easy to use to create and intuitive U
 1. Register to become a user:
    1. Click the Register button at the index page.
      2. Try to subbumit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with all inputs valid and reclick the submit button. Blank input alert appear, press okay button.
+    3. Try to submit the form with all inputs valid and reclick the submit button. Input alert appear, press okay button.
 
 2. Update Profile Description and Birthdate:
    1. Type Description where there is the text "Tell me about Yourself";
@@ -47,9 +48,15 @@ Its simplicity and minimalistic design are easy to use to create and intuitive U
 1. The text placement in some pages is different 
 2. The font in the Iphone has bolder font-style than the Android.
 
+## Problems Found 
+1. Submit the form with all inputs valid, user has to reclick the submit button and a Input alert appear and then it goes to the profile page.
+2. After Selecting the date in the profile page the updated date is compacted to one side along with the birthday date selector.
+3. List does not continuously update and only stores and displays only one note at a time.
+4. The clear button in the edit page only clears the title section.
+
 ## Credits
 ### Media
--Index Forest Pic
+- Index Forest Pic
 https://unsplash.com/photos/El-egS_h_N4
 - Profile BG
 https://unsplash.com/photos/vC8wj_Kphak
